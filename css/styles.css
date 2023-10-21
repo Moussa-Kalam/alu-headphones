@@ -53,6 +53,26 @@
 :root {
   --color-white: #ffffff;
   --color-orange: #ff6565;
+  --color-gray-dark: #071629;
+}
+
+body {
+  font-family: "sourcesanspro", sans-serif;
+  color: var(--color-gray-dark);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 header {
@@ -61,12 +81,10 @@ header {
   background-position: 35%;
   background-size: cover;
   color: var(--color-white);
-  background-attachment: fixed;
-  /* height: 100vh; */
+  /* background-attachment: ; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-family: "sourcesanspro", sans-serif;
 }
 
 .logo {
@@ -80,8 +98,6 @@ header {
   align-items: center;
   width: 15.4375rem;
   padding: 1.5rem 0 0 1.5rem;
-  position: fixed;
-  top: 0;
 }
 
 .nav-links {
@@ -89,7 +105,7 @@ header {
 }
 
 .hero-container {
-  margin: 15rem 0 auto;
+  margin: 18rem 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -138,12 +154,38 @@ header {
   margin: 0.5rem auto;
 }
 
-/* Media Queries - Header*/
+.activities {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.activities .header {
+  width: 20.3125rem;
+}
+
+.articles {
+  width: 12.9375rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Media Queries - Tablet*/
 @media screen and (min-width: 481px) {
+  article {
+    width: 12.9375rem;
+  }
+
   .navigation {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: auto;
   }
 
   .hero-header p {
@@ -151,7 +193,7 @@ header {
   }
 
   .hero-container {
-    margin-top: 30rem;
+    margin-top: 22rem;
   }
 
   .hero-container .description {
@@ -182,10 +224,24 @@ header {
   .nav-links a:hover {
     color: var(--color-orange);
   }
+
+  .activities .header {
+    width: 39.8125rem;
+  }
+
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+    width: 48rem;
+    justify-items: center;
+  }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   .hero-container {
     margin-top: 20rem;
+  }
+
+  .articles {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
