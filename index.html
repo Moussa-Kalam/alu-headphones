@@ -39,9 +39,9 @@
 
         <div class="nav-links">
           <ul>
-            <li><a href="#">What we do</a></li>
-            <li><a href="#">Our results</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="#activities">What we do</a></li>
+            <li><a href="#results">Our results</a></li>
+            <li><a href="#contact">Contact us</a></li>
           </ul>
         </div>
       </nav>
@@ -68,7 +68,7 @@
 
     <!-- Main section -->
     <main>
-      <section class="activities">
+      <section class="activities" id="activities">
         <!-- What we do -->
         <div class="header">
           <h2>What we do...</h2>
@@ -104,7 +104,7 @@
         </div>
       </section>
 
-      <section class="results">
+      <section class="results" id="results">
         <div class="header">
           <h2>Our results speak for themselves</h2>
           <p>
@@ -145,6 +145,41 @@
             <img src="./images/pentagone.png" alt="" />
           </article>
         </div>
+      </section>
+
+      <section class="form" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+          <input
+            required
+            placeholder="Name"
+            id="name"
+            autocomplete="name"
+            minlength="3"
+            maxlength="20"
+          />
+          <br />
+          <input
+            required
+            placeholder="Email"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+          />
+          <br />
+          <input
+            required
+            placeholder="Your message"
+            type="text"
+            id="message"
+            name="message"
+            minlength="10"
+            maxlength="100"
+          />
+
+          <button>Call to action</button>
+        </form>
       </section>
     </main>
   </body>
