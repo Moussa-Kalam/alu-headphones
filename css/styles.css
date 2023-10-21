@@ -1,0 +1,191 @@
+/* Fonts Source Sans Pro*/
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url("./fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2")
+      format("woff2"),
+    url("./fonts/source-sans-pro/sourcesanspro-bold-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url("./fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2")
+      format("woff2"),
+    url("./fonts/source-sans-pro/sourcesanspro-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url("./fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff2")
+      format("woff2"),
+    url("./fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff")
+      format("woff");
+  font-weight: semibold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sourcesanspro";
+  src: url("./fonts/source-sans-pro/sourcesanspro-light-webfont.woff2")
+      format("woff2"),
+    url("./fonts/source-sans-pro/sourcesanspro-light-webfont.woff")
+      format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Fonts Spin Cycle */
+@font-face {
+  font-family: "spincycle";
+  src: url("./fonts/spin-cycle-ot/spincycle_ot-webfont.woff2") format("woff2"),
+    url("./fonts/spin-cycle-ot/spincycle_ot-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color variables */
+:root {
+  --color-white: #ffffff;
+  --color-orange: #ff6565;
+}
+
+header {
+  background: url(../images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  background-position: 35%;
+  background-size: cover;
+  color: var(--color-white);
+  background-attachment: fixed;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "sourcesanspro", sans-serif;
+}
+
+.logo {
+  width: 10.0625rem;
+  height: 2rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15.4375rem;
+  padding: 1.5rem 0 0 1.5rem;
+  position: fixed;
+  top: 0;
+}
+
+.nav-links {
+  display: none;
+}
+
+.hero-container {
+  margin: 15rem 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.hero-container button {
+  width: 10.125rem;
+  height: 2.75rem;
+  border-radius: 1.375rem;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.hero-container button:hover {
+  opacity: 0.9;
+}
+
+.hero-container .description {
+  width: 20.9375rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  padding-bottom: 5rem;
+}
+
+.hero-header {
+  text-align: center;
+}
+
+.hero-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.hero-header p {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 17.4375rem;
+  margin: 0.5rem auto;
+}
+
+/* Media Queries - Header*/
+@media screen and (min-width: 481px) {
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .hero-header p {
+    width: 100%;
+  }
+
+  .hero-container {
+    margin-top: 30rem;
+  }
+
+  .hero-container .description {
+    width: 39.8125rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-orange);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero-container {
+    margin-top: 20rem;
+  }
+}
